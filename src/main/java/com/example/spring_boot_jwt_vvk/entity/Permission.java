@@ -1,6 +1,16 @@
 package com.example.spring_boot_jwt_vvk.entity;
 
-public class Permission extends BaseEntity{
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "t_permission")
+@Getter
+@Setter
+public class Permission extends BaseEntity {
 
     private String permissionName;
 

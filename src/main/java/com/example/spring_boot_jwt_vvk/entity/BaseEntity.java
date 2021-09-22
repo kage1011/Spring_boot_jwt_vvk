@@ -34,4 +34,5 @@ public abstract class BaseEntity implements Serializable {
     private Long createdBy;
 
     private Long updatedBy;
+
 }
