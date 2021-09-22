@@ -8,6 +8,7 @@ class SpringBootJwtVvkApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }

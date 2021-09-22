@@ -4,7 +4,7 @@ package com.example.spring_boot_jwt_vvk.controller;
 import com.example.spring_boot_jwt_vvk.entity.User;
 import com.example.spring_boot_jwt_vvk.service.TokenService;
 import com.example.spring_boot_jwt_vvk.service.UserService;
-import com.example.spring_boot_jwt_vvk.util.UTil;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +20,6 @@ public class AuthController {
 
     @Autowired
     private UserService userService;
-
-    @Autowired
-    private UTil jwtUtil;
 
     @Autowired
     private TokenService tokenService;

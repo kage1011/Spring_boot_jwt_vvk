@@ -1,13 +1,14 @@
 package com.example.spring_boot_jwt_vvk.service;
 
-
 import com.example.spring_boot_jwt_vvk.auth.UserPrincipal;
 import com.example.spring_boot_jwt_vvk.entity.User;
 import com.example.spring_boot_jwt_vvk.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -33,10 +34,10 @@ public class UserServiceImpl implements UserService {
             if (null != user.getRoles())
 
                 user.getRoles().forEach(r -> {
-                authorities.add(r.getRoleKey());
-                r.getPermissions().forEach(
-                        p -> authorities.add(p.getPermissionKey()));
-            });
+                    authorities.add(r.getRoleKey());
+                    r.getPermissions().forEach(
+                            p -> authorities.add(p.getPermissionKey()));
+                });
 
             userPrincipal.setUserId(user.getId());
             userPrincipal.setUsername(user.getUsername());
